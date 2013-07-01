@@ -1,0 +1,9 @@
+BIN = cstat.exe
+OBJ = err.o cp1250_ctype.o file.o hash_table.o stat.o parser.o main.o
+
+.c.obj:
+	cl $< /c
+
+$(BIN): $(OBJ)
+	cl $(OBJ) /Fe$(BIN)
+
